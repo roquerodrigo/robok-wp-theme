@@ -1,0 +1,31 @@
+{
+  "name": "robok-wp-theme",
+  "version": "1.0.0",
+  "description": "Tema Wordpress da Equipe Robok de Futebol de Robôs",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules  --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=production node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roquerodrigo/robok-wp-theme.git"
+  },
+  "keywords": [
+    "robok",
+    "worpress",
+    "theme",
+    "unifei"
+  ],
+  "author": "Rodrigo Roque <rodrigoroque@unifei.edu.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roquerodrigo/robok-wp-theme/issues"
+  },
+  "homepage": "https://github.com/roquerodrigo/robok-wp-theme#readme",
+  "dependencies": {
+    "bootstrap": "twbs/bootstrap#v4-dev",
+    "exports-loader": "^0.6.4",
+    "laravel-mix": "0.12.1"
+  }
+}
