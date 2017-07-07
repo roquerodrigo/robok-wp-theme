@@ -1,6 +1,19 @@
 let mix = require('laravel-mix');
 
-mix.setPublicPath('./assets/')
+mix
+    .options({
+        cleanCss: {
+            level: {
+                1: {
+                    specialComments: 'none'
+                }
+            }
+        },
+        postCss: [
+            require('postcss-discard-comments')({removeAll: true})
+        ],
+        publicPath: 'assets/dist'
+    })
     .autoload({
         'exports-loader?Alert!bootstrap/js/dist/alert': ['Alert'],
         'exports-loader?Button!bootstrap/js/dist/button': ['Button'],
@@ -14,6 +27,6 @@ mix.setPublicPath('./assets/')
         // 'exports-loader?Tooltip!bootstrap/js/dist/tooltip': ['Tooltip'],
         'exports-loader?Util!bootstrap/js/dist/util': ['Util'],
     })
-    .js('src/js/robok.js', 'js/robok.js')
-    .sass('src/scss/robok.scss', 'css/robok.css')
+    .js('assets/js/robok.js', 'assets/dist/js/robok.js')
+    .sass('assets/scss/robok.scss', 'assets/dist/css/robok.css')
     .disableNotifications();

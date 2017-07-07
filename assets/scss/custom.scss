@@ -1,0 +1,59 @@
+.customize-support > .fixed-top {
+  top: 32px;
+}
+
+@include media-breakpoint-up(sm, $grid-breakpoints) {
+  .navbar {
+    padding: $navbar-padding-y * 3 $navbar-padding-x;
+  }
+
+  .top-nav-collapse {
+    padding: $navbar-padding-y $navbar-padding-x;
+  }
+}
+
+@include media-breakpoint-down(xs, $grid-breakpoints) {
+  .navbar {
+    background-color: map_get($theme-colors, dark);
+  }
+
+  body {
+    margin-top: $nav-link-height + $navbar-padding-y + $navbar-padding-x;
+  }
+}
+
+.navbar {
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.homepage-separator {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.homepage-section {
+  padding-bottom: $spacer;
+}
+
+.card-link {
+  color: #fff;
+  &:hover {
+    color: $gray-300;
+    img {
+      transition: opacity .2s ease-in-out;
+      opacity: 0.7;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm, $grid-breakpoints) {
+  .post-title {
+    padding: ($navbar-padding-y * 7) + $nav-link-height;
+  }
+}
+
+.container {
+  max-width: 100%;
+}
