@@ -26,17 +26,6 @@
   transition: background .5s ease-in-out, padding .5s ease-in-out;
 }
 
-.homepage-separator {
-  margin-top: $spacer;
-  margin-bottom: $spacer;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.homepage-section {
-  padding-bottom: $spacer;
-}
-
 .card-link {
   color: #fff;
   &:hover {

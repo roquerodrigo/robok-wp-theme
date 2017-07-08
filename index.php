@@ -5,19 +5,19 @@
 
 <div class="container-fluid">
 
-    <div class="homepage-section row">
+    <div class="row">
         <div class="container">
             <div class="col-12">
-                <h3 class="homepage-separator">Notícias Recentes</h3>
+                <h3 class="m-4 text-uppercase text-center">Notícias Recentes</h3>
 				<?php require 'templates/recent_posts.php' ?>
             </div>
         </div>
     </div>
 
-    <div class="homepage-section row">
+    <div class="row">
         <div class="container">
             <div class="col-12">
-                <h3 class="homepage-separator">Depoimentos</h3>
+                <h3 class="m-4 text-uppercase text-center">Depoimentos</h3>
 				<?php require 'templates/testimonials.php' ?>
             </div>
         </div>
