@@ -1,5 +1,6 @@
-// Apenas para resolver um bug do bootstrap
-$list-group-color: #fff;
+$gray-800: #212121;
+
+$nav-pills-link-active-bg: $gray-800;
 
 $enable-rounded: false;
 $card-border-width: 0;
