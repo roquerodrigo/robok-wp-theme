@@ -1,7 +1,8 @@
+<?php /* Template Name: home */ ?>
+
 <?php require_once 'templates/head.php' ?>
 
-<!--<img src="--><?php //bloginfo( 'template_url' ); ?><!--/assets/img/main_bg.jpg" class="img-fluid">-->
-<img src="https://unsplash.it/1640/624?image=911" class="img-fluid w-100">
+<div class="parallax" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/dist/images/cover.jpg)"></div>
 
 <div class="container-fluid">
 
@@ -27,11 +28,3 @@
 
 <?php require_once 'templates/footer.php' ?>
 
-<script>
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        items: 1,
-    })
-</script>
