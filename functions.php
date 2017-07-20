@@ -49,18 +49,16 @@ function create_members_type() {
 			'labels'      => [
 				'add_new_item'  => __( 'Adicionar novo membro' ),
 				'name'          => __( 'Membros' ),
-				'singular_name' => __( 'Membro' )
+				'singular_name' => __( 'Membro' ),
 			],
 			'public'      => true,
 			'has_archive' => true,
 			'menu_icon'   => 'dashicons-admin-users',
 			'supports'    => [
-				'title'
-			]
+				'title',
+			],
 		]
 	);
-
-
 }
 
 function create_sponsors_type() {
@@ -69,18 +67,16 @@ function create_sponsors_type() {
 			'labels'      => [
 				'add_new_item'  => __( 'Adicionar novo patrocinador' ),
 				'name'          => __( 'Patrocinadores' ),
-				'singular_name' => __( 'Patrocinador' )
+				'singular_name' => __( 'Patrocinador' ),
 			],
 			'public'      => true,
 			'has_archive' => true,
 			'menu_icon'   => 'dashicons-megaphone',
 			'supports'    => [
-				'title'
-			]
+				'title',
+			],
 		]
 	);
-
-
 }
 
 function create_testimonials_type() {
@@ -89,18 +85,16 @@ function create_testimonials_type() {
 			'labels'      => [
 				'add_new_item'  => __( 'Adicionar novo depoimento' ),
 				'name'          => __( 'Depoimentos' ),
-				'singular_name' => __( 'Depoimento' )
+				'singular_name' => __( 'Depoimento' ),
 			],
 			'public'      => true,
 			'has_archive' => true,
 			'menu_icon'   => 'dashicons-format-quote',
 			'supports'    => [
-				'title'
-			]
+				'title',
+			],
 		]
 	);
-
-
 }
 
 add_action( 'init', 'register_custom_post_types' );
