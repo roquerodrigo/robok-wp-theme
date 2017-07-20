@@ -46,3 +46,10 @@
 .container {
   max-width: 100%;
 }
+
+.parallax {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

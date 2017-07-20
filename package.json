@@ -26,7 +26,8 @@
   "dependencies": {
     "bootstrap": "twbs/bootstrap#v4-dev",
     "exports-loader": "^0.6.4",
-    "laravel-mix": "^1.1.0",
+    "laravel-mix": "^1.2.0",
+    "mdi": "^1.9.33",
     "owl.carousel": "^2.2.0",
     "postcss-discard-comments": "^2.0.4"
   },

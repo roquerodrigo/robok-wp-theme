@@ -1,6 +1,7 @@
 let mix = require('laravel-mix');
 
 mix
+
     .options({
         cleanCss: {
             level: {
@@ -12,7 +13,8 @@ mix
         postCss: [
             require('postcss-discard-comments')({removeAll: true})
         ],
-        publicPath: 'assets/dist'
+        publicPath: 'assets/dist',
+        processCssUrls: false
     })
     .autoload({
         'exports-loader?Alert!bootstrap/js/dist/alert': ['Alert'],
@@ -29,4 +31,5 @@ mix
     })
     .js('assets/js/robok.js', 'assets/dist/js/robok.js')
     .sass('assets/scss/robok.scss', 'assets/dist/css/robok.css')
+    .copy('node_modules/mdi/fonts/', 'assets/dist/fonts')
     .disableNotifications();

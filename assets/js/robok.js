@@ -25,3 +25,31 @@ $(window).scroll(function () {
         $(".fixed-top").removeClass("top-nav-collapse").removeClass("bg-dark");
     }
 });
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    items: 1,
+});
+
+
+$('.parallax')
+    .each(function () {
+        let $obj = $(this);
+
+        $(window)
+            .scroll(function () {
+                let yPos = -($(window).scrollTop() / 2);
+
+                let bgpos = '50% ' + yPos + 'px';
+
+                $obj.css('background-position', bgpos);
+            })
+            .resize(function () {
+                $('.parallax').height(($(window).height() / 1.8) + 'px');
+                console.log($(window).width());
+            });
+
+    })
+    .height(($(window).height() / 1.8) + 'px');
