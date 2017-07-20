@@ -20,6 +20,7 @@ while ( have_posts() ) : the_post();
 		'ano_de_entrada_equipe' => get_field( 'ano_de_entrada_equipe' ),
 		'ano_de_saida_equipe'   => get_field( 'ano_de_saida_equipe' ),
 		'sobre'                 => get_field( 'sobre' ),
+		'url'                   => get_field( 'url' ) ?: '#',
 	];
 
 endwhile;
@@ -53,18 +54,34 @@ asort( $subequipes );
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
+                                                <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
+                                                    <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
+                                                </a>
                                             </div>
                                             <div class="col-9">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item pl-0">
-                                                        <h4><?= $membro['nome'] ?></h4>
-                                                        <p><?= $membro['sobre'] ?></p>
-                                                    </li>
-                                                    <li class="list-group-item pl-0">Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?></li>
-                                                    <li class="list-group-item pl-0">Faz <?= $membro['curso'] ?></li>
-                                                    <li class="list-group-item pl-0">Entrou na equipe em <?= $membro['ano_de_entrada_equipe'] ?></li>
-                                                </ul>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td colspan="2" class="border-top-0">
+                                                            <h4>
+                                                                <i class="mdi mdi-account mr-1"></i><?= $membro['nome'] ?>
+                                                            </h4>
+                                                            <p><?= $membro['sobre'] ?></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <i class="mdi mdi-calendar mr-1"></i>Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-school mr-1"></i>Faz <?= $membro['curso'] ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <i class="mdi mdi-calendar mr-1"></i>Entrou na equipe em <?= $membro['ano_de_entrada_equipe'] ?>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -83,19 +100,37 @@ asort( $subequipes );
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
+                                                <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
+                                                    <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
+                                                </a>
                                             </div>
                                             <div class="col-9">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item pl-0">
-                                                        <h4><?= $membro['nome'] ?></h4>
-                                                        <p><?= $membro['sobre'] ?></p>
-                                                    </li>
-                                                    <li class="list-group-item pl-0">Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?></li>
-                                                    <li class="list-group-item pl-0">Faz <?= $membro['curso'] ?></li>
-                                                    <li class="list-group-item pl-0">Entrou na equipe em <?= $membro['ano_de_entrada_equipe'] ?></li>
-                                                    <li class="list-group-item pl-0">Saiu da equipe em <?= $membro['ano_de_saida_equipe'] ?></li>
-                                                </ul>
+                                                <table class="table">
+                                                    <tr>
+                                                        <td colspan="2" class="border-top-0">
+                                                            <h4>
+                                                                <i class="mdi mdi-account mr-1"></i><?= $membro['nome'] ?>
+                                                            </h4>
+                                                            <p><?= $membro['sobre'] ?></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <i class="mdi mdi-calendar mr-1"></i>Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-school mr-1"></i>Faz <?= $membro['curso'] ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <i class="mdi mdi-calendar mr-1"></i>Entrou na equipe em <?= $membro['ano_de_entrada_equipe'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <i class="mdi mdi-calendar mr-1"></i>Saiu da equipe em <?= $membro['ano_de_saida_equipe'] ?>
+                                                        </td>
+                                                </table>
+
                                             </div>
                                         </div>
                                     </div>
