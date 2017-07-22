@@ -48,8 +48,14 @@
 }
 
 .parallax {
-  background-attachment: fixed;
-  background-position: 50% 0;
-  background-repeat: no-repeat;
+  background: no-repeat fixed 50% 0;
   background-size: cover;
+}
+
+.grayscale {
+  filter: #{'grayscale(1)'};
+  transition: filter .1s linear;
+  &:hover {
+    filter: none;
+  }
 }

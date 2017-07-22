@@ -1,6 +1,6 @@
 <?php $loop = new WP_Query( [ 'post_type' => 'testimonials', 'posts_per_page' => 5, 'orderby' => 'rand' ] ) ?>
 
-<div class="owl-carousel owl-theme">
+<div class="owl-carousel owl-theme testimonials">
 
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
