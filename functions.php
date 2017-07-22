@@ -1,5 +1,15 @@
 <?php
+
 require_once 'libs/bs4navwalker.php';
+
+if (
+	! in_array( $GLOBALS['pagenow'], [ 'wp-login.php', 'wp-register.php' ] )
+	&& ! is_admin()
+	&& ! is_user_logged_in()
+) {
+	wp_redirect( 'https://www.facebook.com/EquipeRobok/' );
+	exit();
+}
 
 add_theme_support( 'post-thumbnails' );
 
@@ -104,4 +114,47 @@ function register_custom_post_types() {
 	create_testimonials_type();
 
 	flush_rewrite_rules();
+}
+
+add_action( 'widgets_init', 'register_footer_widgets' );
+function register_footer_widgets() {
+
+	for ( $i = 0; $i < 4; $i ++ ) {
+		register_sidebar( [
+			'name'          => __( 'Footer #' . ( $i + 1 ), 'robok' ),
+			'id'            => 'footer-' . ( $i + 1 ),
+			'description'   => __( 'Footer #' . ( $i + 1 ), 'robok' ),
+			'before_widget' => null,
+			'after_widget'  => null,
+			'before_title'  => '<h4 class="text-uppercase">',
+			'after_title'   => '</h4>',
+		] );
+	}
+}
+
+function bootstrap_pagination() {
+
+	$pages = paginate_links( [
+			'type'      => 'array',
+			'prev_next' => true,
+			'prev_text' => __( '« Página anterior' ),
+			'next_text' => __( 'Próxima página »' ),
+		]
+	);
+
+	if ( is_array( $pages ) ) {
+
+		$pagination = '<ul class="pagination justify-content-center">';
+
+		foreach ( $pages as $page ) {
+			$page = str_replace( 'page-numbers', 'page-link', $page );
+			$page = str_replace( 'current', 'bg-dark text-light disabled', $page );
+
+			$pagination .= '<li class="page-item">' . $page . '</li>';
+		}
+
+		$pagination .= '</ul>';
+
+		echo $pagination;
+	}
 }

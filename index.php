@@ -23,6 +23,14 @@
             </div>
         </div>
     </div>
+<div class="row">
+        <div class="container">
+            <div class="col-12">
+                <h3 class="m-4 text-uppercase text-center">Nossos patrocinadores</h3>
+				<?php require 'templates/sponsors.php' ?>
+            </div>
+        </div>
+    </div>
 
 </div>
 
