@@ -31,14 +31,14 @@ asort( $subequipes );
 
 <div class="container">
     <div class="row">
-        <div class="col-3">
+        <div class="col-sm-12 col-md-3 mb-4">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
 				<?php foreach ( $subequipes as $key => $subequipe ): ?>
                     <a class="nav-link <?= $subequipe['hash'] == 'eletrônica' ? 'active' : '' ?>" id="<?= $subequipe['hash'] ?>-tab" data-toggle="pill" href="#<?= $subequipe['hash'] ?>" role="tab"><?= $key ?></a>
 				<?php endforeach; ?>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-sm-12 col-md-9">
             <div class="tab-content">
 				<?php foreach ( $subequipes as $key => $subequipe ): ?>
                     <div class="tab-pane fade show <?= $subequipe['hash'] == 'eletrônica' ? 'active' : '' ?>" id="<?= $subequipe['hash'] ?>" role="tabpanel">
@@ -53,12 +53,12 @@ asort( $subequipes );
                                 <div class="card mb-4" style="border-width: 1px">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-3">
+                                            <div class="col-sm-12 col-md-3">
                                                 <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
                                                     <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
                                                 </a>
                                             </div>
-                                            <div class="col-9">
+                                            <div class="col-sm-12 col-md-9">
                                                 <table class="table">
                                                     <tr>
                                                         <td colspan="2" class="border-top-0">
@@ -99,12 +99,12 @@ asort( $subequipes );
                                 <div class="card mb-4" style="border-width: 1px">
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-3">
+                                            <div class="col-sm-12 col-md-3">
                                                 <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
                                                     <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
                                                 </a>
                                             </div>
-                                            <div class="col-9">
+                                            <div class="col-sm-12 col-md-9">
                                                 <table class="table">
                                                     <tr>
                                                         <td colspan="2" class="border-top-0">
@@ -130,7 +130,6 @@ asort( $subequipes );
                                                             <i class="mdi mdi-calendar mr-1"></i>Saiu da equipe em <?= $membro['ano_de_saida_equipe'] ?>
                                                         </td>
                                                 </table>
-
                                             </div>
                                         </div>
                                     </div>

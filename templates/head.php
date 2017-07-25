@@ -9,8 +9,8 @@
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
             a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0];
             a.async = 1;
@@ -21,6 +21,7 @@
         ga('create', 'UA-99250107-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <meta name="theme-color" content="#212121">
 </head>
 <body>
 <?php get_template_part( 'templates/header' ) ?>
