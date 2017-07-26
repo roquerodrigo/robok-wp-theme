@@ -4,6 +4,12 @@
 <?php include( locate_template( 'templates/header-title.php' ) ) ?>
 
 <?php
+$wp_query = new WP_Query( [
+	'post_type'      => 'members',
+	'orderby'        => 'ASC',
+	'posts_per_page' => - 1,
+] );
+
 $subequipes = [];
 
 while ( have_posts() ) : the_post();
