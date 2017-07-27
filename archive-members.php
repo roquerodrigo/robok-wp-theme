@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post();
 
 endwhile;
 
-asort( $subequipes );
+ksort( $subequipes );
 
 ?>
 
