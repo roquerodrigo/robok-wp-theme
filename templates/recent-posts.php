@@ -9,7 +9,7 @@
 				<?php if ( has_post_thumbnail( $recent["ID"] ) ): ?>
                     <img class="card-img-top" src="<?= get_the_post_thumbnail_url( $recent["ID"] ) ?>">
 				<?php else : ?>
-                    <img class="card-img-top" src="http://via.placeholder.com/820x312">
+                    <img class="card-img-top" src="http://via.placeholder.com/1200x630">
 				<?php endif; ?>
 
                 <div class="card-body">

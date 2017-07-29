@@ -1,7 +1,3 @@
-.customize-support > .fixed-top {
-  top: 32px;
-}
-
 @include media-breakpoint-up(sm, $grid-breakpoints) {
   .navbar {
     padding: $navbar-padding-y * 3 $navbar-padding-x;
@@ -39,7 +35,7 @@
 
 @include media-breakpoint-up(sm, $grid-breakpoints) {
   .post-title {
-    padding: ($navbar-padding-y * 7) + $nav-link-height;
+    padding: 7rem;
   }
 }
 
@@ -58,4 +54,29 @@
   &:hover {
     filter: none;
   }
+}
+
+.btn-facebook {
+  @include button-variant(#3b5999, #3b5999);
+}
+
+.btn-instagram {
+  @include button-variant(#e4405f, #e4405f);
+}
+
+.btn-twitter {
+  @include button-variant(#55acee, #55acee);
+}
+
+.btn-google-plus {
+  @include button-variant(#dd4b39, #dd4b39);
+}
+
+.aligncenter {
+  margin: auto;
+}
+
+.slideshow-window {
+  border: none !important;
+  border-radius: 0 !important;
 }

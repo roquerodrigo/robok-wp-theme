@@ -26,7 +26,7 @@ include( locate_template( 'templates/header-title.php' ) )
 								<?php if ( has_post_thumbnail() ): ?>
                                     <img class="card-img-top" src="<?= get_the_post_thumbnail_url() ?>">
 								<?php else : ?>
-                                    <img class="card-img-top" src="http://via.placeholder.com/820x312">
+                                    <img class="card-img-top" src="http://via.placeholder.com/1200x630">
 								<?php endif; ?>
                             </a>
                         </div>

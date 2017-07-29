@@ -2,7 +2,7 @@
 
 <?php require_once 'templates/head.php' ?>
 
-<div class="parallax" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/dist/images/cover.jpg)"></div>
+<div class="parallax d-none d-sm-block" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/dist/images/cover.jpg)"></div>
 
 <div class="container-fluid">
 
@@ -10,7 +10,7 @@
         <div class="container">
             <div class="col-12">
                 <h3 class="m-4 text-uppercase text-center">Notícias Recentes</h3>
-				<?php require 'templates/recent_posts.php' ?>
+				<?php require 'templates/recent-posts.php' ?>
             </div>
         </div>
     </div>

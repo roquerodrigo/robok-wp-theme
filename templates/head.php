@@ -32,5 +32,5 @@
         }(document, 'script', 'facebook-jssdk'));</script>
     <meta name="theme-color" content="#212121">
 </head>
-<body>
+<body <?php body_class(); ?>>
 <?php get_template_part( 'templates/header' ) ?>
