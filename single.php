@@ -1,12 +1,5 @@
 <?php require_once 'templates/head.php' ?>
 
-<style>
-    article section p {
-        font-size: 1.2rem;
-        line-height: 2;
-    }
-</style>
-
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<?php $header_title = get_the_title() ?>

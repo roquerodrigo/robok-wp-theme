@@ -844,7 +844,7 @@ boom@2.x.x:
 
 bootstrap@twbs/bootstrap#v4-dev:
   version "4.0.0-alpha.6"
-  resolved "https://codeload.github.com/twbs/bootstrap/tar.gz/f4f63d862352de4ebff7a0fc42a572d97817ebc6"
+  resolved "https://codeload.github.com/twbs/bootstrap/tar.gz/b6791721f52e9bad5a214de38247ee18edf26e57"
   dependencies:
     jquery ">=1.9.1"
     popper.js "^1.11.0"
@@ -3116,8 +3116,8 @@ js-tokens@^3.0.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
 js-yaml@^3.4.3:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.0.tgz#4ffbbf25c2ac963b8299dc74da7e3740de1c18ce"
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.1.tgz#08775cebdfdd359209f0d2acd383c8f86a6904a0"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4244,8 +4244,8 @@ pngquant-bin@^3.0.0:
     logalot "^2.0.0"
 
 popper.js@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.11.0.tgz#0103f23ac0c9221d944e7f25e3aba4c2f73987de"
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.11.1.tgz#f5aca9a73bca1ce1fdbd9be8b1ba68677cbdd8e0"
 
 portfinder@^1.0.9:
   version "1.0.13"
