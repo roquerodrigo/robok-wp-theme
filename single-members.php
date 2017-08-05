@@ -18,9 +18,8 @@ include( locate_template( 'templates/header-title.php' ) );
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <a href="/members" class="btn btn-light mb-4"><i class="mdi mdi-arrow-left mr-2"></i>Veja todos nossos membros</a>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
             <div class="card mb-4" style="border-width: 1px">
                 <div class="card-body">
                     <div class="row">
@@ -44,7 +43,7 @@ include( locate_template( 'templates/header-title.php' ) );
                                         <i class="mdi mdi-calendar mr-1"></i>Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?>
                                     </td>
                                     <td>
-                                        <i class="mdi mdi-school mr-1"></i>Faz <?= $membro['curso'] ?>
+                                        <i class="mdi mdi-school mr-1"></i><?= $membro['curso'] ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -57,8 +56,7 @@ include( locate_template( 'templates/header-title.php' ) );
                     </div>
                 </div>
             </div>
-
-
+            <a href="/members" class="btn btn-light mb-4"><i class="mdi mdi-arrow-left mr-2"></i>Veja todos nossos membros</a>
         </div>
     </div>
 </div>

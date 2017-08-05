@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post();
 		'ano_de_entrada_equipe' => get_field( 'ano_de_entrada_equipe' ),
 		'ano_de_saida_equipe'   => get_field( 'ano_de_saida_equipe' ),
 		'sobre'                 => get_field( 'sobre' ),
-		'url'                   => get_field( 'url' ) ?: '#',
+		'url'                   => get_permalink(),
 	];
 
 endwhile;
@@ -60,7 +60,7 @@ ksort( $subequipes );
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-12 col-md-3">
-                                                <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
+                                                <a href="<?= $membro['url'] ?>">
                                                     <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
                                                 </a>
                                             </div>
@@ -79,7 +79,7 @@ ksort( $subequipes );
                                                             <i class="mdi mdi-calendar mr-1"></i>Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?>
                                                         </td>
                                                         <td>
-                                                            <i class="mdi mdi-school mr-1"></i>Faz <?= $membro['curso'] ?>
+                                                            <i class="mdi mdi-school mr-1"></i><?= $membro['curso'] ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -106,7 +106,7 @@ ksort( $subequipes );
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-sm-12 col-md-3">
-                                                <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
+                                                <a href="<?= $membro['url'] ?>">
                                                     <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
                                                 </a>
                                             </div>
@@ -125,7 +125,7 @@ ksort( $subequipes );
                                                             <i class="mdi mdi-calendar mr-1"></i>Entrou na UNIFEI em <?= $membro['ano_de_entrada_unifei'] ?>
                                                         </td>
                                                         <td>
-                                                            <i class="mdi mdi-school mr-1"></i>Faz <?= $membro['curso'] ?>
+                                                            <i class="mdi mdi-school mr-1"></i><?= $membro['curso'] ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
