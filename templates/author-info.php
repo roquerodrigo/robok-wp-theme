@@ -17,7 +17,7 @@
                 <a target="_blank" href="<?php the_author_meta( 'googleplus' ); ?>" class="btn btn-google-plus"><i class="mdi mdi-google-plus"></i></a>
 			<?php endif; ?>
 			<?php if ( get_the_author_meta( 'email' ) ): ?>
-                <a href="malito:<?php the_author_meta( 'email' ); ?>" class="btn btn-dark"><i class="mdi mdi-email"></i></a>
+                <a href="mailto:<?php the_author_meta( 'email' ); ?>" class="btn btn-dark"><i class="mdi mdi-email"></i></a>
 			<?php endif; ?>
         </p>
     </div>

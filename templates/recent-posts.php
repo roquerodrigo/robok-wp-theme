@@ -1,6 +1,9 @@
-<?php $recent_posts = wp_get_recent_posts( [
+<?php
+$recent_posts = wp_get_recent_posts( [
 	'numberposts' => 3,
-] ); ?>
+	'post_status' => 'publish',
+] );
+?>
 
 <h3 class="m-4 text-uppercase text-center">Notícias Recentes</h3>
 
