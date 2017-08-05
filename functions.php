@@ -108,19 +108,6 @@ function register_custom_post_types() {
 
 add_action( 'widgets_init', 'register_widgets' );
 function register_widgets() {
-
-	for ( $i = 0; $i < 4; $i ++ ) {
-		register_sidebar( [
-			'name'          => __( 'Footer #' . ( $i + 1 ), 'robok' ),
-			'id'            => 'footer-' . ( $i + 1 ),
-			'description'   => __( 'Footer #' . ( $i + 1 ), 'robok' ),
-			'before_widget' => null,
-			'after_widget'  => null,
-			'before_title'  => '<h4 class="text-uppercase">',
-			'after_title'   => '</h4>',
-		] );
-	}
-
 	register_sidebar( [
 		'name'          => __( 'Barra Lateral (Direita)', 'robok' ),
 		'id'            => 'aside-right',
