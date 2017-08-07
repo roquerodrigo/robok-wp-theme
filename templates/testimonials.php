@@ -7,7 +7,7 @@ $loop = new WP_Query( [
 
 if ( $loop->have_posts() ): ?>
 
-    <h3 class="m-4 text-uppercase text-center">Depoimentos</h3>
+    <h3 class="mb-4 text-uppercase text-center">Depoimentos</h3>
 
     <div class="owl-carousel owl-theme testimonials">
 

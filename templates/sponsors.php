@@ -5,7 +5,7 @@ $new_query = new WP_Query( [
 
 if ( $new_query->have_posts() ): ?>
 
-    <h3 class="m-4 text-uppercase text-center">Nossos patrocinadores</h3>
+    <h3 class="mb-4 text-uppercase text-center">Nossos patrocinadores</h3>
 
     <div class="owl-carousel owl-theme sponsors">
 
