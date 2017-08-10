@@ -24,9 +24,9 @@ include( locate_template( 'templates/header-title.php' ) )
                         <div class="col-md-4 mb-3">
                             <a href="<?= get_permalink() ?>">
 								<?php if ( has_post_thumbnail() ): ?>
-                                    <img class="card-img-top" src="<?= get_the_post_thumbnail_url() ?>">
+                                    <img class="card-img-top" src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title() ?>">
 								<?php else : ?>
-                                    <img class="card-img-top" src="http://via.placeholder.com/1200x630">
+                                    <img class="card-img-top" src="http://via.placeholder.com/1200x630" alt="<?php the_title() ?>">
 								<?php endif; ?>
                             </a>
                         </div>

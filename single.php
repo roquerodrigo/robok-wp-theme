@@ -25,15 +25,8 @@
                     </section>
 
                     <footer>
-
                         <hr>
-
 						<?php require_once 'templates/author-info.php' ?>
-
-						<?php if ( function_exists( 'dw_reactions' ) ) {
-							dw_reactions();
-						} ?>
-
                         <hr>
 						<?php if ( comments_open() || get_comments_number() ) : comments_template();endif; ?>
                     </footer>

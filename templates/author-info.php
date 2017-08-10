@@ -1,7 +1,7 @@
 <h4 class="text-uppercase mb-4">Sobre o autor</h4>
 <div class="row">
     <div class="col-2">
-        <img src="<?= get_wp_user_avatar_src() ?>" class="img-fluid w-100 rounded-circle" alt="">
+        <img src="<?= get_wp_user_avatar_src() ?>" class="img-fluid w-100 rounded-circle" alt="<?= get_the_author_meta( 'display_name' ) ?>">
     </div>
     <div class="col-10">
         <h4 class="text-uppercase"><?= get_the_author_meta( 'display_name' ) ?></h4>

@@ -14,9 +14,9 @@ $recent_posts = wp_get_recent_posts( [
             <a class="card-link" href="<?= get_permalink( $recent["ID"] ) ?>">
 
 				<?php if ( has_post_thumbnail( $recent["ID"] ) ): ?>
-                    <img class="card-img-top" src="<?= get_the_post_thumbnail_url( $recent["ID"] ) ?>">
+                    <img class="card-img-top" src="<?= get_the_post_thumbnail_url( $recent["ID"] ) ?>" alt="<?= $recent["post_title"] ?>">
 				<?php else : ?>
-                    <img class="card-img-top" src="http://via.placeholder.com/1200x630">
+                    <img class="card-img-top" src="http://via.placeholder.com/1200x630" alt="<?= $recent["post_title"] ?>">
 				<?php endif; ?>
 
                 <div class="card-body">
