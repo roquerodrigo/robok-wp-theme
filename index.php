@@ -1,5 +1,4 @@
 <?php /* Template Name: home */ ?>
-
 <?php require_once 'templates/head.php' ?>
 
     <div class="parallax d-none d-sm-block" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/dist/images/cover.jpg)"></div>

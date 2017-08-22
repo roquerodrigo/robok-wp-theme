@@ -28,16 +28,23 @@ $(window).scroll(function () {
 });
 
 $('.testimonials').owlCarousel({
+    autoHeight: true,
     loop: true,
     margin: 10,
     autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    nav: false,
     items: 1,
 });
 
 $('.sponsors').owlCarousel({
+    autoHeight: true,
     loop: true,
     margin: 10,
     autoplay: true,
+    autoplayTimeout: 9000,
+    autoplayHoverPause: true,
     items: 5,
     nav: false,
     responsive: {
@@ -55,6 +62,34 @@ $('.sponsors').owlCarousel({
         },
         1200: {
             items: 5,
+        }
+    }
+});
+
+$('.recent-posts').owlCarousel({
+    autoHeight: true,
+    loop: true,
+    margin: 0,
+    autoplay: true,
+    autoplayTimeout: 8000,
+    autoplayHoverPause: true,
+    items: 3,
+    nav: false,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        576: {
+            items: 1,
+        },
+        768: {
+            items: 3,
+        },
+        992: {
+            items: 3,
+        },
+        1200: {
+            items: 3,
         }
     }
 });

@@ -1,11 +1,24 @@
 <?php
 require_once 'libs/bs4navwalker.php';
 
-add_theme_support( 'post-thumbnails' );
+function wpse_setup_theme() {
+	if ( function_exists( 'add_theme_support' ) ) {
+		add_theme_support( 'post-thumbnails' );
+
+		add_image_size( 'recent-post-thumb', 600, 315 );
+		add_image_size( 'sponsor-thumb', 99999999, 150 );
+		add_image_size( 'testimonial-thumb', 150, 150 );
+		add_image_size( 'member-thumb', 200, 200 );
+	}
+}
+
+add_action( 'after_setup_theme', 'wpse_setup_theme' );
+
+add_theme_support( 'title-tag' );
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/js/robok.js', [], false, true );
-	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/dist/css/robok.css' );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/js/robok.js', [], filemtime( __DIR__ . '/assets/dist/js/robok.js' ), true );
+	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/dist/css/robok.css', [], filemtime( __DIR__ . '/assets/dist/css/robok.css' ) );
 } );
 
 register_nav_menus( [
@@ -170,8 +183,8 @@ if ( function_exists( "register_field_group" ) ) {
 				'label'        => 'Foto',
 				'name'         => 'foto',
 				'type'         => 'image',
-				'save_format'  => 'url',
-				'preview_size' => 'thumbnail',
+				'save_format'  => 'id',
+				'preview_size' => 'testimonial-thumb',
 				'library'      => 'all',
 			],
 			[
@@ -362,8 +375,8 @@ if ( function_exists( "register_field_group" ) ) {
 				'label'        => 'Foto',
 				'name'         => 'foto',
 				'type'         => 'image',
-				'save_format'  => 'url',
-				'preview_size' => 'medium',
+				'save_format'  => 'id',
+				'preview_size' => 'member-thumb',
 				'library'      => 'all',
 			],
 			[
@@ -431,8 +444,8 @@ if ( function_exists( "register_field_group" ) ) {
 				'label'        => 'Imagem',
 				'name'         => 'imagem',
 				'type'         => 'image',
-				'save_format'  => 'url',
-				'preview_size' => 'thumbnail',
+				'save_format'  => 'id',
+				'preview_size' => 'sponsor-thumb',
 				'library'      => 'all',
 			],
 			[
@@ -468,3 +481,32 @@ if ( function_exists( "register_field_group" ) ) {
 		'menu_order' => 0,
 	] );
 }
+
+function disable_wp_emojicons() {
+
+	// all actions related to emojis
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	// filter to remove TinyMCE emojis
+	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}
+
+add_action( 'init', 'disable_wp_emojicons' );
+
+function disable_emojicons_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, [ 'wpemoji' ] );
+	} else {
+		return [];
+	}
+}
+
+add_filter( 'emoji_svg_url', '__return_false' );
+
+remove_action( 'wp_head', 'wp_generator' );

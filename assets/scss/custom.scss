@@ -1,3 +1,9 @@
+@font-face {
+  font-family: PTSerif;
+  src: url(../fonts/PTF55F.ttf);
+  font-style: normal;
+}
+
 @include media-breakpoint-up(sm, $grid-breakpoints) {
   .navbar {
     padding: $navbar-padding-y * 3 $navbar-padding-x;
@@ -46,10 +52,6 @@
   }
 }
 
-.container {
-  max-width: 100%;
-}
-
 .parallax {
   background: no-repeat fixed 50% 0;
   background-size: cover;
@@ -58,8 +60,10 @@
 .grayscale {
   filter: #{'grayscale(1)'};
   transition: filter .1s linear;
+  opacity: 0.8;
   &:hover {
     filter: none;
+    opacity: 1;
   }
 }
 
@@ -91,4 +95,9 @@
 article section p {
   font-size: 1.2rem;
   line-height: 2;
+}
+
+.post-title {
+  background-image: url(../images/bg.png);
+  background-size: cover;
 }

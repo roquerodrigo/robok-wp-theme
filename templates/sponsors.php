@@ -12,7 +12,7 @@ if ( $new_query->have_posts() ): ?>
 		<?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
             <div class="item">
                 <a href="<?php the_field( 'url' ); ?>" target="_blank">
-                    <img class="grayscale" src="<?php the_field( 'imagem' ); ?>" alt="<?php the_field( 'nome' ); ?>">
+                    <img class="grayscale" src="<?= wp_get_attachment_image_src( get_field( 'imagem' ), 'sponsor-thumb' )[0] ?>" alt="<?php the_field( 'nome' ); ?>">
                 </a>
             </div>
 		<?php endwhile; ?>

@@ -25,7 +25,7 @@ include( locate_template( 'templates/header-title.php' ) );
                     <div class="row">
                         <div class="col-sm-12 col-md-3">
                             <a href="<?= $membro['url'] ?>" <?= $membro['url'] == '#' ? '' : 'target="_blank"' ?>>
-                                <img src="<?= $membro['foto'] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
+                                <img src="<?= wp_get_attachment_image_src( $membro['foto'], 'member-thumb' )[0] ?>" alt="<?= $membro['nome'] ?>" class="card-img-top">
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-9">

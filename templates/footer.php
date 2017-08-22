@@ -4,6 +4,9 @@
         <a href="https://www.facebook.com/EquipeRobok/" class="btn text-light" style="font-size: 1.3em" target="_blank"><i class="mdi mdi-facebook"></i></a>
         <a href="mailto:robokunifei@gmail.com" class="btn text-light" style="font-size: 1.3em"><i class="mdi mdi-email"></i></a>
     </div>
+    <p class="text-center bg-dark text-light p-4 mb-0">
+        Copyright© 2010-<?= date( "Y" ) ?> Equipe Robok de Futebol de Robôs - Todos os direitos reservados.
+    </p>
 </footer>
 
 <?php wp_footer(); ?>

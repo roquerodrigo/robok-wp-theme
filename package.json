@@ -24,11 +24,12 @@
   },
   "homepage": "https://github.com/roquerodrigo/robok-wp-theme#readme",
   "dependencies": {
-    "bootstrap": "twbs/bootstrap#v4-dev",
+    "bootstrap": "4.0.0-beta",
     "exports-loader": "^0.6.4",
     "laravel-mix": "^1.2.0",
     "mdi": "^2.0.46",
     "owl.carousel": "^2.2.0",
+    "popper.js": "^1.11.1",
     "postcss-discard-comments": "^2.0.4"
   },
   "devDependencies": {
