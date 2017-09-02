@@ -29,6 +29,13 @@
             js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=479585005752772";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8774561789969316",
+            enable_page_level_ads: true
+        });
+    </script>
     <meta name="theme-color" content="#212121">
 </head>
 <body <?php body_class(); ?>>
