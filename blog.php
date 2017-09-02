@@ -6,7 +6,7 @@ $args     = [ 'post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged ];
 $wp_query = new WP_Query( $args );
 
 $header_title = get_the_title();
-include( locate_template( 'templates/header-title.php' ) )
+include( locate_template( 'templates/header-title.php' ) );
 
 ?>
 
@@ -18,7 +18,7 @@ include( locate_template( 'templates/header-title.php' ) )
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-                    <div class="row mb-4">
+                    <div class="row mb-4 post">
 
                         <div class="col-md-4 mb-3">
                             <a href="<?= get_permalink() ?>">

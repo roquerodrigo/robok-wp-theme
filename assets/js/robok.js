@@ -18,99 +18,86 @@ require('bootstrap/js/dist/util');
 
 require('owl.carousel');
 
-//jQuery to collapse the navbar on scroll
-$(window).scroll(function () {
-    if ($(".navbar").offset().top > 50) {
-        $(".fixed-top").addClass("top-nav-collapse").addClass("bg-dark");
-    } else {
-        $(".fixed-top").removeClass("top-nav-collapse").removeClass("bg-dark");
-    }
-});
-
-$('.testimonials').owlCarousel({
-    autoHeight: true,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 10000,
-    autoplayHoverPause: true,
-    nav: false,
-    items: 1,
-});
-
-$('.sponsors').owlCarousel({
-    autoHeight: true,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 9000,
-    autoplayHoverPause: true,
-    items: 5,
-    nav: false,
-    responsive: {
-        0: {
-            items: 1,
-        },
-        576: {
-            items: 3,
-        },
-        768: {
-            items: 4,
-        },
-        992: {
-            items: 5,
-        },
-        1200: {
-            items: 5,
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {
+            $(".fixed-top").addClass("top-nav-collapse").addClass("bg-dark");
+        } else {
+            $(".fixed-top").removeClass("top-nav-collapse").removeClass("bg-dark");
         }
-    }
-});
+    });
 
-$('.recent-posts').owlCarousel({
-    autoHeight: true,
-    loop: true,
-    margin: 0,
-    autoplay: true,
-    autoplayTimeout: 8000,
-    autoplayHoverPause: true,
-    items: 3,
-    nav: false,
-    responsive: {
-        0: {
-            items: 1,
-        },
-        576: {
-            items: 1,
-        },
-        768: {
-            items: 3,
-        },
-        992: {
-            items: 3,
-        },
-        1200: {
-            items: 3,
+    $('.testimonials').owlCarousel({
+        autoHeight: true,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        nav: false,
+        items: 1,
+    });
+
+    $('.sponsors').owlCarousel({
+        autoHeight: true,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 9000,
+        autoplayHoverPause: true,
+        items: 5,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 3,
+            },
+            768: {
+                items: 4,
+            },
+            992: {
+                items: 5,
+            },
+            1200: {
+                items: 5,
+            }
         }
-    }
+    });
+
+    $('.parallax')
+        .each(function () {
+            let $obj = $(this);
+
+            $(window)
+                .scroll(function () {
+                    let yPos = -($(window).scrollTop() / 2);
+
+                    let bgpos = '50% ' + yPos + 'px';
+
+                    $obj.css('background-position', bgpos);
+                })
+                .resize(function () {
+                    $('.parallax').height(($(window).height() / 1.8) + 'px');
+                    console.log($(window).width());
+                });
+
+        })
+        .height(($(window).height() / 1.8) + 'px');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+
+    $('#back-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    }, 'slow');
 });
-
-
-$('.parallax')
-    .each(function () {
-        let $obj = $(this);
-
-        $(window)
-            .scroll(function () {
-                let yPos = -($(window).scrollTop() / 2);
-
-                let bgpos = '50% ' + yPos + 'px';
-
-                $obj.css('background-position', bgpos);
-            })
-            .resize(function () {
-                $('.parallax').height(($(window).height() / 1.8) + 'px');
-                console.log($(window).width());
-            });
-
-    })
-    .height(($(window).height() / 1.8) + 'px');
