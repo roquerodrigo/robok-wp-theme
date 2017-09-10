@@ -5,7 +5,13 @@ $recent_posts = wp_get_recent_posts( [
 ] );
 ?>
 
-<h3 class="mb-4 text-uppercase text-center">Notícias Recentes</h3>
+
+<h3 class="mb-4 text-uppercase">
+    Notícias Recentes
+    <a href="/blog" class="btn btn-light pull-right">
+        Ver mais <i class="mdi mdi-arrow-right"></i>
+    </a>
+</h3>
 
 <div class="card-deck">
 	<?php foreach ( $recent_posts as $recent ) : ?>
@@ -27,7 +33,5 @@ $recent_posts = wp_get_recent_posts( [
 
 	<?php endforeach; ?>
 </div>
-
-<div class="text-right mt-2"><a href="/blog" class="text-uppercase">Ver mais</a></div>
 
 <?php wp_reset_query(); ?>

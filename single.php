@@ -14,8 +14,10 @@
                         <p>
                             <i class="mdi mdi-clock"></i>
 							<?php the_time( 'j \d\e F \d\e Y H:i' ); ?>
-                            <i class="mdi mdi-account ml-2"></i>
-							<?php the_author() ?>
+                            <a href="#author-info" class="text-dark">
+                                <i class="mdi mdi-account ml-2"></i>
+								<?php the_author() ?>
+                            </a>
                         </p>
                         <hr>
                     </header>
@@ -25,9 +27,9 @@
                     </section>
 
                     <footer>
-                        <hr>
-						<?php require_once 'templates/author-info.php' ?>
-                        <hr>
+                        <div id="author-info" class="bg-light p-4">
+							<?php require_once 'templates/author-info.php' ?>
+                        </div>
 						<?php if ( comments_open() || get_comments_number() ) : comments_template();endif; ?>
                     </footer>
 

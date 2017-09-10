@@ -6,3 +6,9 @@
 		<?php endif; ?>
     </div>
 </div>
+
+<?php if ( function_exists( 'yoast_breadcrumb' ) ) : ?>
+    <div class="container" style="margin-bottom: 2rem">
+		<?php wps_yoast_breadcrumb_bootstrap(); ?>
+    </div>
+<?php endif; ?>
