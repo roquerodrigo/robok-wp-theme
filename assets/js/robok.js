@@ -58,10 +58,10 @@ $(document).ready(function () {
                 items: 4,
             },
             992: {
-                items: 5,
+                items: 6,
             },
             1200: {
-                items: 5,
+                items: 6,
             }
         }
     });
