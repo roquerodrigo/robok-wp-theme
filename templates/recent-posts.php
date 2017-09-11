@@ -5,18 +5,19 @@ $recent_posts = wp_get_recent_posts( [
 ] );
 ?>
 
-
-<h3 class="mb-4 text-uppercase">
-    Notícias Recentes
-    <a href="/blog" class="btn btn-light pull-right">
+<div class="d-flex justify-content-between mb-4">
+    <h3 class="text-uppercase">
+        Notícias Recentes
+    </h3>
+    <a href="/blog" class="btn btn-light">
         Ver mais <i class="mdi mdi-arrow-right"></i>
     </a>
-</h3>
+</div>
 
 <div class="card-deck">
 	<?php foreach ( $recent_posts as $recent ) : ?>
 
-        <div class="card bg-dark m-2">
+        <div class="card bg-dark mb-2">
             <a class="card-link" href="<?= get_permalink( $recent["ID"] ) ?>">
 
 				<?php if ( has_post_thumbnail( $recent["ID"] ) ): ?>
