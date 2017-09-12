@@ -35,9 +35,14 @@
 
                 </article>
             </div>
-			<?php if ( is_active_sidebar( 'aside-right' ) ): ?>
-                <div class="col-md-3 aside-right"><?php dynamic_sidebar( 'aside-right' ); ?></div>
-			<?php endif ?>
+
+            <div class="col-md-3 aside-right">
+				<?php if ( is_active_sidebar( 'aside-right' ) ): ?>
+					<?php dynamic_sidebar( 'aside-right' ); ?>
+				<?php endif ?>
+
+				<?php related_posts(); ?>
+            </div>
         </div>
     </div>
 <?php endwhile; ?>
